@@ -13,8 +13,8 @@ public class MyInterface {
         JFrame fen = new MaFrame();
         EcouteurSouris ecouteS = new EcouteurSouris();
 
-        JLabel jl = new JLabel("mon label");
-        JLabel jl2 = new JLabel("mon label2");
+        JLabel jl = new JLabel("Mon piano");
+        JLabel jl2 = new JLabel("Rayan");
 
         JButton jbDO = new MesBoutons("DO");
         JButton jbRE = new MesBoutons("RE");

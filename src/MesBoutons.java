@@ -59,20 +59,25 @@ public class MesBoutons extends JButton implements ActionListener {
 
     }
 
-    public void convertJBTextIntoNumber(){
-        String[] tab = new String[]{"DO","RE","MI","FA", "SOL"};
-        Map<String,String> notes = new HashMap<String,String>();
-        notes.put("60","DO");
-        notes.put("62","RE");
-        notes.put("64","MI");
-        notes.put("65","FA");
-        notes.put("67","SOL");
+    public int convertJBTextIntoNumber(String text){
+        int res =0;
+        if(text.equals("DO"))
+            res = 60;
+        else if(text.equals("RE"))
+            res = 62;
+        else if(text.equals("MI"))
+            res = 64;
+        else if(text.equals("FA"))
+            res = 65;
+        else if(text.equals("SOL"))
+            res = 67;
+        return res;
+
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("je suis le bouton " + this.getText() + " et je suis pressé eheh");
-        //playNote();
+        playNote(convertJBTextIntoNumber(this.getText()),1);
     }
 
 
